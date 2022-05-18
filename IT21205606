@@ -1,4 +1,13 @@
 //Hash
 class recipe{
   private:
+    int recipe_ID;
+    char Recipe_name [10];
+    int Prep_time;
+    int Cookt_time;
+    int price;
+    char categary[10];
     
+    public:
+      recipe();
+      recipe(char rId[], char rName[], int pTime,  )
