@@ -1,0 +1,62 @@
+// payment class//
+
+#include <iostream>
+#include<string>
+using namespace std;
+
+class Payment
+{
+private:
+	char paymentID[10];
+	char paymentDate[10];
+	char paymentMethod[50];
+	double amount;
+	
+public:
+	Payment(char pID, char pDate, char pMethod, double pamount);
+	void displayPayment();
+	~Payment();
+};
+//implementation of Payment
+Payment::Payment(){}
+Payment::Payment(char pID, char pDate, char pMethod, double pamount)
+{
+	paymentID = pID;
+	paymentDate = pDate;
+	paymentMethod = pMethod;
+	amount = pamount;
+}
+void Payment::displayPayment()
+{
+	return Payment;
+}
+Payment::~Payment()
+{
+	cout << "Payment deleted" << endl;
+}
+
+
+//Accountant Class//
+#include <iostream>
+#include<string>
+using namespace std;
+
+class Accountant :public Staff {
+private:
+	int accountantID;
+public:
+	Accountant();
+	Accountant(int accID);
+	void displayDetails;
+	~Accountant();
+};
+//implementation of Accountant
+Accountant::Accountant(){}
+Accountant::Accountant(int accID, char sName, char sEmail, char pNo,char Aadd, char sNIC):
+Staff(Sname, Semail,pNo,Aadd,sNIC){
+	accountantID = accID;
+}
+void Accountant::displayDetails() {
+
+}
+Accountant::~Accountant();
