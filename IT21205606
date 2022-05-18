@@ -1,18 +1,126 @@
-//Hash
+//recipe.h
 class Recipe{
   private:
     int recipe_ID;
     char Recipe_name [10];
     int Prep_time;
-    int Cookt_time;
+    int Cook_time;
     int price;
     char categary[10];
     
     public:
       Recipe();
-      recipe(char rId[], char rName[], int pTime, int coTime, int rPrice, char cate[] );
+      Recipe(int rId, const char rName[], int pTime, int coTime, int rPrice, const char cate[] );
       void upadateRecipe();
-      ~Recipe();
+      void deleteRecipe();
+      void displayRecipe();
+   };
+   
+   //Recipe.cpp
+   #include "Recipe.h"
+   #include<iostream>
+   #include<cstring>
+   using namespace std;
+   
+   Recipe::Recipe(){
+          recipe_ID = 0;
+          strcpy_s(Recipe_name, "");
+          Prep_time = 0;
+          Cookt_time = 0;
+          price = 0;
+          strcpy_s(categary, "");
+    }
+    
+    void Recipe::Recipe(int rId, char rName[], int pTime, int coTime, int rPrice, char cate[] ){
+          recipe_ID = rId;
+          strcpy_s(Recipe_name, rName);
+          Prep_time = pTime;
+          Cookt_time = rPrice;
+          price = 0;
+          strcpy_s(categary, cate);
+          
+    }
+    
+    
+      void Recipe::updateRecipe(){}
+      
+      void Recipe::deleteRecipe(){
+          cout<<recipe_ID<< " recipe is Deleted";
+          
+       }
+       
+       void Recipe::displayRecipe(){
+          cout<<"Recipe ID :"<<recipe_ID<<endl;
+          cout<<"Recipe Name :"<<Recipe_name<<endl;
+          cout<<"Preparation time :"<<Prep_time<<endl;
+          cout<<"Cook Time : "<<Cook_time<<endl;
+          cout<<"Price : "<<price<<endl;
+          cout<<"Category : "<<categary<<endl;
+          
+         }
+         
+         
+   //staff.h
+   
+   class Staff{
+      protected:
+        char name[20];
+        char email[30];
+        char phoneNumber[10];
+        char address[30];
+        char NIC[12];
+       
+       public:
+         Staff();
+         Staff(char sName[], char sEmail[], char pNO[], char address[] , char sNIC[]);
+         void displayDetails();
+         ~Staff();
+     }
+     
+     
+     //staff.cpp
+     #include "Recipe.h"
+    #include<iostream>
+   #include<cstring>
+   using namespace std;
+   
+    Staff(){
+      strcpy_s(name ,"");
+      strcpy_s(email ,"");
+      strcpy_s(phoneNumber ,"");
+      strcpy_s(address ,"");
+      strcpy_s(NIC,"");
+      
+      }
+      
+     Staff(char sName[], char sEmail[], char pNO[], char address[] , char sNIC[]){
+        strcpy_s(name ,sName);
+        strcpy_s(email ,sEmail);
+        strcpy_s(phoneNumber ,pNO);
+        strcpy_s(address ,address);
+        strcpy_s(NIC,sNIC);
+        
+      }
+      
+      void Staff::displayDetails(){
+      
+        cout<<"Name :"<<name<<endl;
+        cout<<"Email :"<<email<<endl;
+        cout<<"Phone Number :"<<phoneNumber<<endl;
+        cout<<"Address :"<<address<<endl;
+        cout<<"NIC :"<<NIC<<endl;
+        
+       }
+          
+     
+     
+            
+        
+       
+       
+            
+      
+          
       
       
       
