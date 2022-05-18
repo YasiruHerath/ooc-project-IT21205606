@@ -20,11 +20,11 @@ public:
 	}
 	RegisteredUser(int Rid, const char Rname, const char Rmail, const char Rpass, int feed1, int feed2, int rcp1, int rcp2)
 	{
-		feedback[0] = new Feedback(feed1);
-		feedback[1] = new Feedback(feed2);
+		feedback[0] = new Feedback[feed1];
+		feedback[1] = new Feedback[feed2];
 
-		recipe[0] = new Recipe(rcp1);
-		recipe[1] = new Recipe(rcp2);
+		recipe[0] = new Recipe[rcp1];
+		recipe[1] = new Recipe[rcp2];
 
 	}
 	void RegisteredUser::EditProfile(int Rid, const char Rname, const char Rmail, const char Rpass)
