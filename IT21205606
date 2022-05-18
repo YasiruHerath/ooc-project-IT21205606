@@ -1,5 +1,5 @@
 //Hash
-class recipe{
+class Recipe{
   private:
     int recipe_ID;
     char Recipe_name [10];
@@ -9,5 +9,10 @@ class recipe{
     char categary[10];
     
     public:
-      recipe();
-      recipe(char rId[], char rName[], int pTime,  )
+      Recipe();
+      recipe(char rId[], char rName[], int pTime, int coTime, int rPrice, char cate[] );
+      void upadateRecipe();
+      ~Recipe();
+      
+      
+      
