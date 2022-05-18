@@ -1,0 +1,85 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class RegisteredUser
+{
+private:
+	int userID;
+	char name;
+	char email;
+	char password;
+
+	Feedback* feedback[2];
+	Recipe* recipe[2];
+
+public:
+	RegisteredUser()
+	{
+	}
+	RegisteredUser(int Rid, const char Rname, const char Rmail, const char Rpass, int feed1, int feed2, int rcp1, int rcp2)
+	{
+		feedback[0] = new Feedback(feed1);
+		feedback[1] = new Feedback(feed2);
+
+		recipe[0] = new Recipe(rcp1);
+		recipe[1] = new Recipe(rcp2);
+
+	}
+	void RegisteredUser::EditProfile(int Rid, const char Rname, const char Rmail, const char Rpass)
+	{
+
+	}
+	void displayUserDetails()
+	{
+
+	}
+	~RegisteredUser()
+
+	{
+		cout << "Delete RegistertedUser Details" << endl;
+		{
+			delete feedback[0];
+			delete feedback[1];
+			delete recipe[0];
+			delete recipe[1];
+		}
+
+	}
+
+
+};
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Feedback
+{
+private:
+	int feedbackId;
+	char feedbackContent;
+
+	Manager* Mng;
+
+public:
+	feedback()
+	{
+	}
+	feedback(int FId, const char fcontent, Manager* pMng)
+	{
+
+	}
+	void Feedback::displayDetails()
+	{
+
+	}
+	~Feedback()
+	{
+
+	}
+
+};
+
