@@ -1,0 +1,89 @@
+#include<iostream>
+#inlude<cstring>
+using namespace std;
+
+//Declaring Manager Class
+class Manager :
+{
+private:
+        id managerID[15];
+        char name[25];
+        char email[20];
+        char password[15];        
+public:
+       Manager();
+       Manager(int mID, const char* mName, const char* mMail, const char* mPass);
+       void verifyLogin();
+       void displayDetails();
+       ~Manager();
+};
+
+//Implementing Manager Class
+Manager::Manager(){}
+
+Manager::Manager(int mID, const char* mName, const char* mMail, const char* mPass);
+{
+  mID = managerID;
+  mName = name;
+  mMail = email;
+  mPass = password;
+}
+
+void Customer::Customer()
+{
+  cout<<"manager ID"<<mID<<endl;
+  cout<<"manager name"<<mName<<endl;
+  cout<<"manager email"<<mMail<<endl;
+  cout<<"manager password"<<mPass<<endl;
+}
+  
+void Manager::verifyLogin(){}
+
+void Manager::displayDetails(){}
+
+Manager::~Manager()
+{
+  cout<<"Manager deleted"<<endl;
+}
+
+//Declaring Card Class
+
+class Manager :
+{
+private:
+        int cardNo[25];
+        char cardType[20];
+        char expdate[15];        
+public:
+       cardDetails();
+       cardDetails(int cNo, const char* cType, const char* cExpdate);
+       void doTransaction();
+       void validatePayment();
+       ~cardDetails();
+};
+
+//Implementing Card Class
+Card::Card(){}
+
+Card::cardDetails(int cNo, const char* cType, const char* cExpdate);
+{
+  cNo = cardNo;
+  cType = cardType;
+  cExpdate = expdate;
+}
+
+void Customer::Customer()
+{
+  cout<<"card No"<<cNo<<endl;
+  cout<<"card Type"<<cType<<endl;
+  cout<<"card Expiry date"<<cExpdate<<endl;
+}
+  
+void Card::doTransaction(){}
+
+void Card::validatePayment(){}
+
+Card::~Card()
+{
+  cout<<"Card deleted"<<endl;
+}
